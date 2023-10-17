@@ -13,9 +13,12 @@ body{
 .top{
 	display:flex;
 	align-items:center;
-	position:relative;
+	position:fixed;
+	top:0;
+	width:100%;
 	background-color:#04364A;
 	justify-content:space-between;
+
 }
 
 .top #logo{
@@ -29,9 +32,28 @@ body{
 	size:5px;
 }
 
-#text{
-	font-size:17px;
+.ani{
+	animation:logoBounce 5s ease-in infinite;
 }
+
+@keyframes logoBounce{
+	0%{
+		transform:translateX(0);
+	}
+
+	25%{
+		transform:translateX(50px);
+	}
+
+	50%{
+		transform:translateY(0);
+	}
+
+	75%{
+		transform:translateY(25px);
+	}
+}
+
 
 .write-up #readless{
 	display:none;
@@ -41,17 +63,31 @@ body{
 	padding:5px 5px;
 	background-color:#04364A;
 	color:#DAFFFB;
-	border-radius:30%;
+	border-radius:20%;
 	border:none;
 	outline:none;
 	cursor:pointer;
 	font-size:13px;
 	width:15%;
+	margin:10px;
+}
+
+#myBtn1{
+	padding:5px 5px;
+	background-color:#04364A;
+	color:#DAFFFB;
+	border-radius:20%;
+	border:none;
+	outline:none;
+	cursor:pointer;
+	font-size:13px;
+	width:15%;
+	margin:10px;
 }
 
 h2 #focus{
 	font-family:Microsoft Sans Serif;
-	font-size:28px;
+	font-size:34px;
 	color:#04364A;
 
 }
@@ -67,7 +103,14 @@ h2 #focus{
 #mockup1{
 	heighth:700px;
     width:100%;
+    padding-top:120px;
+ 
 }
+
+img #mockup1{
+padding-top:50px;
+}
+
 
 #slogan{
 	background-color:#04364A;
@@ -78,10 +121,26 @@ h2 #focus{
 	margin:25px;
 }
 
-h2{
-	text-align:center;
+.link h4{
+	font-size:18px;
+	animation:fadeIn 2s infinite;
 }
 
+@keyframes fadeIn{
+	0% { opacity: 0; }
+	50%{ opacity: 0.5; }
+	100%{ opacity: 1; }
+}
+
+h2{
+	text-align:center;
+	font-size:28px;
+}
+
+
+.write-up{
+	font-size:20px;
+}
 ul{
 	background-color:white;
 	margin:50px;
@@ -115,3 +174,27 @@ li a:hover{
 li a:active{
 	background-color:#00BCDC;
 }
+
+footer{
+	display:flex;
+	align-items:center;
+	background-color:#04364A;
+	justify-content:center;
+	color:#DAFFFB;
+	padding:0px;
+	font-size:20px;
+}
+
+/*for every first image in every page except home page*/
+    img #mockup2{
+	heighth:700px;
+	width:1000px;
+    width:100%;
+    margin-top:50px;
+}
+
+/*To bold the subtitle*/
+#Bold{
+	font-weight:bold;
+}
+
